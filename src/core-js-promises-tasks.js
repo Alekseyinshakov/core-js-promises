@@ -109,14 +109,7 @@ function getFirstPromiseResult(promises) {
  * [Promise.resolve(1), Promise.reject(2), Promise.resolve(3)] => Promise rejected with 2
  */
 function getAllOrNothing(promises) {
-  return Promise.all(promises).then(
-    (result) => {
-      return result;
-    },
-    (reson) => {
-      return reson;
-    }
-  );
+  return Promise.all(promises);
 }
 
 /**
